@@ -16,6 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Diagnosticar a rede (sem entrar no servidor)
+        env:
+          SERVIDOR: ${{ secrets.DESPERTAR_SSH_HOST }}
+          PORTA: ${{ secrets.DESPERTAR_SSH_PORT || vars.DESPERTAR_SSH_PORT }}
+        run: bash hospedagem/diagnosticar-rede.sh
+
       - name: Preparar o acesso SSH
         env:
           CHAVE: ${{ secrets.DESPERTAR_SSH_KEY }}
