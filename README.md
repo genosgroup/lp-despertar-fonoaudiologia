@@ -136,8 +136,9 @@ os mesmos nos três repositórios e estão explicados no
 ## Antes de ir ao ar
 
 - [ ] **GA4:** preencher `GA_ID` em `src/lib/medicao.ts` quando a propriedade existir.
-- [ ] **Automação do n8n:** montar o webhook `despertar-lp-fono` e protegê-lo (Header Auth + `.despertar-lp.php`). Criar no Kommo o campo "Idade da
-      criança".
+- [x] **Automação do n8n:** webhook no fluxo "[Rastreamento] Rastreamento Google | LP |
+      Kommo", testado em 10/11 (com e sem UTM). No Kommo, "Idade da criança" foi criado e
+      "Quem indicou?" já existia. Falta proteger o webhook (Header Auth + `.despertar-lp.php`).
 - [ ] **Troca de 16/11:** os grupos FONO e FONOAUDIOLOGIA da /lp1 e o /primeira-visita
       redirecionam para cá mantendo a query string (tabela no LEIA-ME do pacote).
 - [ ] **Parte 4 do [checklist](https://github.com/genosgroup/padroes/blob/main/checklist-lp.md):**
