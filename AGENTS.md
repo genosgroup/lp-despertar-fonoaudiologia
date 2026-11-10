@@ -65,6 +65,13 @@ componentes são os mesmos, e o que muda fica em `src/lib/site.ts`, `src/lib/med
 na pergunta de idade de `src/lib/lead.ts` e no pacote em `conteudo/`. Mudou um componente
 aqui? Leve a mudança para as outras duas.
 
+**Publicação:** Turbo Cloud (cPanel + LiteSpeed), como **site estático** (`output: "export"`,
+sem Node e sem Cache Components, que não funciona em exportação). O envio do lead é o
+`public/api/lead/index.php` (igual nas três páginas; o que muda fica em `pagina.php`), não
+uma rota do Next. Quem publica é o GitHub Actions, por SSH, com os scripts de
+`hospedagem/`. Não crie rota de servidor no Next (route handler com POST, server action):
+ela não existe no site publicado.
+
 O HTML e o CSS da página vêm do pacote aprovado e ficam em `conteudo/`, sem edição à mão.
 Para mudar texto, troque o pacote inteiro. Detalhes no `README.md`.
 
